@@ -1,0 +1,308 @@
+@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+[class*="__container"] {
+    max-width: 1240px;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+[class*="__example-content"] {
+    display: inline-block;
+}
+
+[class*="__example-content"] > .pseudo-circle {
+    display: inline-block;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #707070;
+}
+
+[class*="__example-content"] > span:not(:first-child) {
+    margin-inline-start: 20px;
+}
+
+
+.header__content {
+    color: #1E1B39;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 107.955%;
+
+    text-align: center;
+}
+
+
+.pseudo-classes__container {
+    max-width: 1000px;
+}
+
+.pseudo-classes__example {
+    text-align: center;
+}
+
+.pseudo-classes__title {
+    color: #1E1B39;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 107.955%;
+}
+
+.custom-list {
+    display: block;
+    padding: 0;
+    text-align: left;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.custom-list > li {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-list > li:hover {
+    background-color: #d1ecf1;
+}
+
+.custom-list > li::before {
+    content: "•";
+    color: #007bff;
+    font-size: 1.5em;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-list ul {
+    padding: 10px 20px;
+    margin: 0;
+    background-color: #f9f9f9;
+    border-left: 2px solid #007bff;
+    border-radius: 0 0 8px 8px;
+}
+
+.custom-list ul li {
+    padding: 5px 0;
+    color: #007bff;
+    font-size: 0.9em;
+}
+
+.custom-list ul li:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.custom-list:has(.first-child:hover) ~ .view__example-content > .pseudo-circle:first-child {
+    background-color: yellow;
+}
+
+.custom-list:has(.last-child:hover) ~ .view__example-content > .pseudo-circle:last-child {
+    background-color: yellow;
+}
+
+.custom-list:has(.even:hover) ~ .view__example-content > .pseudo-circle:nth-child(even) {
+    background-color: yellow;
+}
+
+.custom-list:has(.odd:hover) ~ .view__example-content > .pseudo-circle:nth-child(odd) {
+    background-color: yellow;
+}
+
+.custom-list:has(.three:hover) ~ .view__example-content > .pseudo-circle:nth-child(3) {
+    background-color: yellow;
+}
+
+.custom-list:has(.number:hover) ~ .view__example-content > .pseudo-circle:nth-child(n) {
+    background-color: yellow;
+}
+
+.custom-list:has(.second-number:hover) ~ .view__example-content > .pseudo-circle:nth-child(2n) {
+    background-color: yellow;
+}
+
+.custom-list:has(.pattern_1:hover) ~ .view__example-content > .pseudo-circle:nth-last-child(2) {
+    background-color: yellow;
+}
+
+.custom-list:has(.pattern_2:hover) ~ .view__example-content > .pseudo-circle:nth-last-child(3n) {
+    background-color: yellow;
+}
+
+.custom-list:has(.pattern_3:hover) ~ .view__example-content > .pseudo-circle:nth-last-child(3n+4) {
+    background-color: yellow;
+}
+
+
+/* timeline section */
+.project-timeline {
+    margin-top: 80px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.project-timeline__container {
+    max-width: 890px;
+}
+
+.project-timeline__list {
+    counter-reset: value;
+}
+
+.item {
+    position: relative;
+    padding-inline-start: 260px;
+    padding-block: 21px;
+    min-height: 218px;
+}
+
+.item:not(:first-child) {
+    margin-top: 54px;
+}
+
+.item::before {
+    content: counter(value, decimal-leading-zero);
+    counter-increment: value;
+
+    position: absolute; 
+    top: calc(50% - 218px / 2);
+    left: 0;
+    display: inline-block;
+    width: 218px;
+    aspect-ratio: 1;
+    background-color:  rgba(74, 58, 255, 0.1);
+    border-radius: 50%;
+
+    color: #4A3AFF;
+    text-align: center;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 240%;
+}
+
+
+.item__sub-title {
+    color:  #4A3AFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.item__title {
+    color: #1E1B39;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 128.571%;
+}
+
+.item__text {
+    color:  #6E6C83;
+    font-size: 24px;
+    line-height:  175%; 
+}
+
+/* pricing-plans section  */
+.page__pricing-plans {
+    margin-block: 60px;
+}
+
+.pricing-plans__card {
+    width: 542px;
+    border-radius: 56px;
+    background: #F0F0F6;
+    margin-inline: auto;
+}
+
+.card {
+    max-width: 542px;
+
+    padding: 24px;
+}
+
+.display {
+    background: #4A3AFF;
+    border-radius: 34px;
+    min-height: 270px;
+    text-align: center;
+
+    padding-block: 44px;
+}
+
+.display__pricing-plan {
+    color: #FFF;
+    font-weight: 700;
+    line-height: 106.667%;
+}
+
+.display__pricing-price {
+    color: var(--Neutral-Colors-Color-100, #FFF);
+    text-align: center;
+    font-size: 116px;
+    font-weight: 700;
+    line-height: 103.448%;
+}
+
+.display__pricing-period {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.card__plan-list {
+    margin-top: 33px;
+}
+
+.card__plan-item:nth-of-type(n+2) {
+    margin-top: 26px;
+}
+
+.card__plan-item {
+    position: relative;
+    padding-inline-start: 60px;
+    color:  #1E1B39;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 135.714%;
+}
+
+.card__plan-item::before {
+    content: url("../assets/images/check.png");
+    position: absolute;
+    top: 0;
+    left: 13px;
+}
+
+.footer {
+    padding-block: 20px;
+    background-color: #007bff;
+
+}
+.footer__container {
+    text-align: center;
+}
+.footer__link {
+    min-width: 200px;
+    min-height: 40px;
+    padding: 6px 24px;
+    background-color: rgba(112, 112, 112, 0.6);
+    border-radius: 6px;
+
+
+
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.footer__link:hover {
+    background-color: rgba(112, 112, 112, 0.8);
+}

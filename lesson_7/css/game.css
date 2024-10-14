@@ -1,0 +1,225 @@
+@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700");
+
+.wrapper {
+    width: 100%;
+    height: 100svh;
+    position: relative;
+
+    font-family: Caveat, sans-serif;
+
+}
+
+/* component */
+.score-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 15px;
+}
+
+.score-panel > *:not(:first-child) {
+    margin-inline-start: 20px;
+}
+
+.score,
+.loss,
+.win {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 120%;
+}
+
+.score {
+    color: #25d887;
+}
+
+.loss {
+    color: #d82549;
+}
+
+.win {
+    color: #1928d2;
+}
+
+
+.game-area {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    width: 600px;
+    height: 80svh;
+    max-width: 1240px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 15px 0px rgba(8,120,240,1);
+    box-shadow: inset 0px 0px 5px 5px rgba(20, 111, 171, 0.75);
+}
+
+.start-item,
+.finish-item {
+    width: 80px;
+    height: 80px;
+
+    opacity: 0.5;
+    text-align: center;
+}
+
+.start-item {
+    background-color: #1616e0;
+    border-radius: 10px 0 0 0;
+}
+
+.start-item:hover {
+    box-shadow: 0 0 5px #0808ba;
+    background-color: #1d1dda;
+}
+
+.finish-item {
+    background-color: #f19312;
+    margin-inline-start: auto;
+    border-radius: 0 0 10px 0;
+    visibility: hidden;
+}
+
+.finish-item:hover {
+    box-shadow: 0 0 5px #b16c0c;
+    background-color: b16c0c;
+
+}
+
+.item__label {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 200%;
+}
+
+.start-item:hover,
+.start-item:hover ~ .pipe__1 {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.pipe {
+    box-shadow: 
+        inset -5px 0 8px rgba(0, 0, 0, 0.5),  
+        0px 0px 10px rgba(0, 0, 0, 0.3); 
+    position: relative;
+}
+
+.pipe:hover {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.pipe__1 {
+    height: 15%;
+    width: 20px;
+    margin-inline-start: 60px;
+    background-color: #d4d45f;
+    visibility: hidden;
+}
+
+.pipe__1:hover ~ .pipe__2 {
+    visibility: visible;
+}
+
+.pipe__2 {
+    height: 15px;
+    width: 25%;
+    margin-inline-start: 60px;
+    background-color: #3250c9;
+    border-radius: 0 10px 0 10px; 
+    visibility: hidden;
+}
+
+.pipe__2:hover ~ .pipe__3 {
+    visibility: visible;
+}
+
+.pipe__3 {
+    height: 10%;
+    width: 10px;
+    margin-inline-start: 200px;
+    background-color: #d82549;
+    visibility: hidden;
+}
+
+.pipe__3:hover ~ .pipe__4 {
+    visibility: visible;
+}
+
+.pipe__4 {
+    height: 14px;
+    width: 30%;
+    margin-inline-start: 200px;
+    background-color: #25d887;
+    border-radius: 0 10px 0 10px; 
+    visibility: hidden;
+}
+
+.pipe__4:hover ~ .pipe__5 {
+    visibility: visible;
+}
+
+.pipe__5 {
+    height: 15%;
+    width: 10px;
+    margin-inline-start: 370px;
+    background-color: #d219d2;
+    visibility: hidden;
+}
+
+.pipe__5:hover ~ .pipe__6 {
+    visibility: visible;
+}
+
+.pipe__6 {
+    height: 14px;
+    width: 40%;
+    margin-inline-start: 140px;
+    background-color: #0bd9ff;
+    border-radius: 10px 0 10px 0; 
+    visibility: hidden;
+}
+
+.pipe__6:hover ~ .pipe__7 {
+    visibility: visible;
+}
+
+.pipe__7 {
+    height: 25.5%;
+    width: 10px;
+    margin-inline-start: 140px;
+    background-color: #0cd175;
+    visibility: hidden;
+}
+
+.pipe__7:hover ~ .pipe__8 {
+    visibility: visible;
+}
+
+.pipe__8 {
+    height: 10px;
+    width: 76.5%;
+    margin-inline-start: 140px;
+    background-color: #fdb300;
+    border-radius: 0 0 0 10px; 
+    visibility: hidden;
+}
+
+.pipe__8:hover ~ .finish-item {
+    visibility: visible;
+}
+
+.finish-item:hover {
+    visibility: visible;
+    cursor: pointer;
+}
+
+
